@@ -12,6 +12,7 @@
 		925544631C273BA300BB1472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925544611C273BA300BB1472 /* Main.storyboard */; };
 		925544651C273BA300BB1472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925544641C273BA300BB1472 /* Assets.xcassets */; };
 		925544681C273BA300BB1472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925544661C273BA300BB1472 /* LaunchScreen.storyboard */; };
+		925544701C27675100BB1472 /* AWActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255446F1C27675100BB1472 /* AWActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		925544641C273BA300BB1472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925544671C273BA300BB1472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925544691C273BA300BB1472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9255446F1C27675100BB1472 /* AWActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				9255445D1C273BA300BB1472 /* AppDelegate.swift */,
 				9255445F1C273BA300BB1472 /* ViewController.swift */,
+				9255446F1C27675100BB1472 /* AWActivityIndicator.swift */,
 				925544611C273BA300BB1472 /* Main.storyboard */,
 				925544641C273BA300BB1472 /* Assets.xcassets */,
 				925544661C273BA300BB1472 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				925544601C273BA300BB1472 /* ViewController.swift in Sources */,
 				9255445E1C273BA300BB1472 /* AppDelegate.swift in Sources */,
+				925544701C27675100BB1472 /* AWActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
