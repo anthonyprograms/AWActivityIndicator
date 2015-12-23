@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         view.addSubview(button)
         
-//        activity.setActivityBackgroundColor(UIColor.clearColor())
-//        activity.setDotColor(UIColor.blackColor())
+        activity.setActivityBackgroundColor(UIColor(white: 0.0, alpha: 0.1))
+        activity.setDotColor(UIColor.orangeColor())
         activity.setNameOfPath("spiral")
         self.view.addSubview(activity)
     }

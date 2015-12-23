@@ -10,9 +10,12 @@ import UIKit
 
 class AWActivityIndicator: UIView {
     
+    // Creating the layer constants and Animation
     let r = CAReplicatorLayer()
     let dot = CALayer()
     let move = CAKeyframeAnimation(keyPath: "position")
+    
+    // Default Values
     var animating = false
     var pathName = "diamond"
     var defaultActivityBackgroundColor = UIColor(white: 0.0, alpha: 0.75).CGColor
@@ -20,6 +23,7 @@ class AWActivityIndicator: UIView {
     
     // MARK: Animations
     
+    // This function is called to create the animation of the activity indicator
     func animation(){
         r.bounds = CGRect(x: 0, y: 0, width: 120, height: 120)
         r.backgroundColor = defaultActivityBackgroundColor
@@ -88,23 +92,9 @@ class AWActivityIndicator: UIView {
         return CGPathCreateCopy(arrow.CGPath)!
     }
     
-    // TODO: Spiral Path curves
-    func spiralPath() -> CGPath {
-        let spiral = UIBezierPath()
-        spiral.moveToPoint(CGPointMake(60,60))
-        spiral.addCurveToPoint(CGPointMake(60,45), controlPoint1: CGPointMake(50,60), controlPoint2: CGPointMake(60,55))
-        spiral.addCurveToPoint(CGPointMake(30,60), controlPoint1: CGPointMake(60,35), controlPoint2: CGPointMake(40,60))
-//        spiral.addCurveToPoint(CGPointMake(60,45), controlPoint1: CGPointMake(60,45), controlPoint2: CGPointMake(60,45))
-//        spiral.addCurveToPoint(CGPointMake(40,60), controlPoint1: CGPointMake(40,60), controlPoint2: CGPointMake(40,60))
-//        spiral.addCurveToPoint(CGPointMake(60,35), controlPoint1: CGPointMake(60,35), controlPoint2: CGPointMake(60,35))
-//        spiral.addCurveToPoint(CGPointMake(30,60), controlPoint1: CGPointMake(30,60), controlPoint2: CGPointMake(30,60))
-        
-        return CGPathCreateCopy(spiral.CGPath)!
-    }
-    
     // MARK: Actions
     func setNameOfPath(name: String){
-        if name == "star" || name == "arrow" || name == "spiral" {
+        if name == "star" || name == "arrow" {
             self.pathName = name
         } else {
             self.pathName = "diamond"
@@ -131,9 +121,6 @@ class AWActivityIndicator: UIView {
             move.duration = 4.5
         } else if pathName == "arrow" {
             move.path = arrowPath()
-            move.duration = 4.0
-        } else if pathName == "spiral" {
-            move.path = spiralPath()
             move.duration = 4.0
         } else {
             move.path = diamondPath()
